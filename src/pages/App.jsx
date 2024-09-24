@@ -7,6 +7,7 @@ import Experience from './experience/Experience';
 import Contacts from './contacts/Contacts';
 import Title from '../components/typopraphy/Title';
 import { FaChevronUp } from 'react-icons/fa';
+import { RxDividerHorizontal } from 'react-icons/rx';
 
 const App = () => {
   const scrollToTop = () => {
@@ -25,20 +26,20 @@ const App = () => {
           <Contacts />
         </main>
         <footer className="flex flex-col justify-center min-h-7xl items-center bg-blue-200 p-4 text-white">
-          <Title first="katiyar" second="mradul_" />
+          <Title first="mradul" second="katiyar" />
 
-          <div id="copyright" align="center" className='text-black'>
+          <div id="copyright" align="center" className='text-black mt-6'>
             &copy; 2024 www.your-site.com - All Rights Reserved.
             {/* <span>Last Updated : 09/07/2024 14:38:32</span> */}
           </div>
         </footer>
-        {/* <button
+        <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
           aria-label="Scroll to top"
         >
           <FaChevronUp />
-        </button> */}
+        </button>
       </div>
     </>
   );

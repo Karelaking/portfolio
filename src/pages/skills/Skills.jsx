@@ -76,17 +76,17 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-scree h-full py-12">
+    <div className="py-12">
       <div className="mx-auto">
         <div className="flex w-full items-center">
           <CodeBracketIcon className="size-12 mr-5 text-blue-500" />
           <PageHeading partOne="my" partTwo="skills" />
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white mx-2 flex flex-col items-center justify-center overflow-hidden shadow rounded-lg"
+              className="bg-white mx-2 flex flex-col items-center justify-center overflow-hidden shadow-md rounded-lg"
             >
               <div className="px-4 py-5 sm:p-6">
                 <div className="flex items-center justify-center mb-4">

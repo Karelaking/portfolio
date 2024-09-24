@@ -61,7 +61,7 @@ const Contacts = () => {
 
   if (submitted) {
     return (
-      <div className="flex w-full items-center justify-center min-h-screen h-full">
+      <div className="flex w-full items-center justify-center">
         <div className="w-full rounded-lg shadow-lg p-8 transform transition-all duration-500 ease-in-out hover:scale-105">
           <h2 className="text-2xl font-bold text-center text-green-600 mb-4">
             Thank You!

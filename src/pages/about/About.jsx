@@ -7,7 +7,6 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { FaWhatsapp } from 'react-icons/fa6';
 import { ArrowDownIcon } from '@heroicons/react/16/solid';
 import Title from '../../components/typopraphy/Title';
 
@@ -23,7 +22,7 @@ const icons = [
   },
   {
     icon: <FaInstagram size={iconSize} color="#e4405f" />,
-    href: 'https://www.instagram.com/katiyar_mradul/',
+    href: 'https://www.instagram.com/katiyar_karela_king/',
     text: 'Instagram',
     target: '_blank',
   },
@@ -78,13 +77,17 @@ export const About = () => {
         id="about"
         className="flex flex-col w-full min-h-screen h-full justify-center items-center"
       >
-        <div className="w-full flex items-center">
-          <Title first="katiyar" second="mradul_" />
+        <div className="w-full flex flex-col items-center">
+          <p className='text-4xl font-DancingScript font-semibold mb-3 mt-16 lg:mt-0'>Hey , this is</p>
+          <Title first="mradul" second="katiyar" />
         </div>
-        <p className="text-3xl lg:text-4xl p-3 lg:p-12 my-4 lg:my-0 lg:text-center font-DancingScript text-center font-semibold">
-           a passionate programmer and developer from very vibrent Kanpur, Uttar Pradesh, India. Currently a student, I'm always on the lookout for new ways to enhance my skills and push the boundaries of what's possible with code.
+        <p className="text-3xl lg:text-4xl p-3 lg:p-12 my-4 lg:my-0 lg:text-center font-DancingScript text-center font-medium">
+          A passionate programmer and developer from very vaibrent city Kanpur,
+          Uttar Pradesh, India. Currently a student, I'm always on the lookout
+          for new ways to enhance my skills and push the boundaries of what's
+          possible with code.
         </p>
-        <div className="flex flex-wrap gap-6 lg:gap-12 my-8">
+        <div className="flex flex-wrap gap-6 lg:gap-12 my-8 justify-center">
           {icons.map((icon) => (
             <div className="flex flex-col items-center">
               <a
