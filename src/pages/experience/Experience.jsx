@@ -70,7 +70,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="min-h-screen h-full w-full flex flex-col p-2">
+    <div className="w-full flex flex-col p-2">
       <div className="flex items-center">
         <AcademicCapIcon className="size-12 mr-5 text-blue-500" />
         <PageHeading partOne="my" partTwo="academics" />
@@ -80,15 +80,15 @@ const Experience = () => {
           {achievements.map((achievement) => (
             <div
               key={achievement.id}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-2">
-                <FaAward className="text-blue-500 mr-2 size-10" />
-                <h3 className="text-lg font-semibold text-gray-800">
+                <FaAward className="text-blue-500 mr-6 size-10" />
+                <h3 className="text-2xl font-bold font-SofadiOne text-gray-800">
                   {achievement.title}
                 </h3>
               </div>
-              <p className="text-gray-600 my-3">{achievement.description}</p>
+              <p className="text-gray-600 my-3 text-md font-medium">{achievement.description}</p>
               <a
                 href={achievement.image}
                 target="_blank"
@@ -114,16 +114,16 @@ const Experience = () => {
             {experiences.map((experience) => (
               <div
                 key={experience.id}
-                className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg"
+                className="bg-white rounded-lg shadow-md p-8 hover:scale-105 lg:hover:scale-110 transition-all duration-300 hover:shadow-2xl"
               >
-                <h3 className="text-2xl font-semibold mb-2 text-gray-800">
+                <h3 className="text-3xl font-semibold font-SofadiOne mb-2 text-gray-800">
                   {experience.role}
                 </h3>
                 <p className="text-blue-500 mb-2">{experience.company}</p>
                 <p className="text-sm text-gray-400 mb-4">
                   {experience.duration}
                 </p>
-                <ul className="list-disc list-inside text-gray-900">
+                <ul className="list-disc font-medium text-md list-inside text-gray-600">
                   {experience.responsibilities.map((responsibility, index) => (
                     <li key={index} className="mb-1">
                       {responsibility}
