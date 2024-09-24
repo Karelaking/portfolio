@@ -7,8 +7,21 @@ import Experience from './experience/Experience';
 import Contacts from './contacts/Contacts';
 import Title from '../components/typopraphy/Title';
 import { FaChevronUp } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+// Initialize AOS
+AOS.init({
+  duration: 1500, // animation duration in milliseconds
+  easing: 'easeInOutQuad', // animation easing function
+});
 
 const App = () => {
+  const [waiting, setWaiting] = useState(false);
+
+  useEffect(() => {});
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -27,7 +40,7 @@ const App = () => {
         <footer className="flex flex-col justify-center min-h-7xl items-center bg-blue-200 p-4 text-white">
           <Title first="katiyar" second="mradul_" />
 
-          <div id="copyright" align="center" className='text-black'>
+          <div id="copyright" align="center" className="text-black">
             &copy; 2024 www.your-site.com - All Rights Reserved.
             {/* <span>Last Updated : 09/07/2024 14:38:32</span> */}
           </div>

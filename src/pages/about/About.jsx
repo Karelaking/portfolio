@@ -81,8 +81,14 @@ export const About = () => {
         <div className="w-full flex items-center">
           <Title first="katiyar" second="mradul_" />
         </div>
-        <p className="text-3xl lg:text-4xl p-3 lg:p-12 my-4 lg:my-0 lg:text-center font-DancingScript text-center font-semibold">
-           a passionate programmer and developer from very vibrent Kanpur, Uttar Pradesh, India. Currently a student, I'm always on the lookout for new ways to enhance my skills and push the boundaries of what's possible with code.
+        <p
+          className="text-3xl lg:text-4xl p-3 lg:p-12 my-4 lg:my-0 lg:text-center font-DancingScript text-center font-semibold"
+          data-aos="fade-up"
+        >
+          a passionate programmer and developer from very vibrent Kanpur, Uttar
+          Pradesh, India. Currently a student, I'm always on the lookout for new
+          ways to enhance my skills and push the boundaries of what's possible
+          with code.
         </p>
         <div className="flex flex-wrap gap-6 lg:gap-12 my-8">
           {icons.map((icon) => (
