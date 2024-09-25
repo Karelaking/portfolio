@@ -3,7 +3,7 @@ import React from 'react';
 const CardWithImage = (props) => {
   return (
     <>
-      <div className="mx-2 overflow-hidden rounded-lg bg-white shadow-md hover:shadow-xl hover:scale-105 lg:hover:scale-110 duration-300">
+      <div className="mx-2 overflow-hidden rounded-lg bg-secondary shadow-md hover:shadow-xl hover:scale-105 lg:hover:scale-110 duration-300">
         <img
           src={props.image}
           className="aspect-video w-full object-cover"
@@ -14,7 +14,7 @@ const CardWithImage = (props) => {
             {props.title}
           </h3>
           <p className="mt-1 text-md font-medium text-gray-500">{props.description}</p>
-          <p className="text-sm text-blue-400 my-2 capitalize">
+          <p className="text-sm text-primary my-2 capitalize">
             jun 2015 - feb 2017
           </p>
           <div className="mt-4 flex gap-2">

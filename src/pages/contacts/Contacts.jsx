@@ -9,6 +9,7 @@ import {
 import { PiAddressBook } from 'react-icons/pi';
 import PageHeading from '../../components/typopraphy/PageHeading';
 
+const iconColor = "text-primary";
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -77,7 +78,7 @@ const Contacts = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="flex items-center">
-        <PiAddressBook className="size-11 text-blue-500 mr-5" />
+        <PiAddressBook className={`size-11 ${iconColor} mr-5`} />
         <PageHeading partOne="contact" partTwo="me" />
       </div>
 
@@ -222,18 +223,12 @@ const Contacts = () => {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                123 Developer Street, Code City, 12345
+                Kanpur, Uttar Pradesh, India, code - 208015
               </p>
             </div>
             <div className="mt-4 rounded-xl overflow-hidden">
               <iframe
-                title="Developer's Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1845841069295!2d-73.98648844847565!3d40.75789417922848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2591d7e6c6903%3A0x66f6eb75fa1e18a9!2sGrand%20Central%20Terminal!5e0!3m2!1sen!2sus!4v1623345678901!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3573.4272697784736!2d80.37436707536757!3d26.40968497695057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1727271300561!5m2!1sen!2sin"
               ></iframe>
             </div>
           </div>

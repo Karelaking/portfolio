@@ -26,11 +26,12 @@ import {
 } from 'react-icons/si';
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 
+const iconColor = "text-primary"
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      icon: <FaCode className="text-3xl mb-2" />,
+      icon: <FaCode className={`text-6xl mb-2 ${iconColor}`} />,
       skills: [
         { name: 'JavaScript', icon: <SiJavascript /> },
         { name: 'Python', icon: <SiPython /> },
@@ -38,7 +39,7 @@ const Skills = () => {
     },
     {
       title: 'Frameworks',
-      icon: <FaCodeBranch className="text-3xl mb-2" />,
+      icon: <FaCodeBranch className={`text-6xl mb-2 ${iconColor}`} />,
       skills: [
         { name: 'React', icon: <SiReact /> },
         { name: 'Node.js', icon: <SiNodedotjs /> },
@@ -49,7 +50,7 @@ const Skills = () => {
     },
     {
       title: 'Databases',
-      icon: <FaDatabase className="text-3xl mb-2" />,
+      icon: <FaDatabase className={`text-6xl mb-2 ${iconColor}`} />,
       skills: [
         { name: 'MongoDB', icon: <SiMongodb /> },
         { name: 'PostgreSQL', icon: <SiPostgresql /> },
@@ -57,7 +58,7 @@ const Skills = () => {
     },
     {
       title: 'Tools',
-      icon: <FaTools className="text-3xl mb-2" />,
+      icon: <FaTools className={`text-6xl mb-2 ${iconColor}`} />,
       skills: [
         { name: 'Docker', icon: <SiDocker /> },
         { name: 'Git', icon: <SiGit /> },
@@ -67,7 +68,7 @@ const Skills = () => {
     },
     {
       title: 'Other',
-      icon: <FaServer className="text-3xl mb-2" />,
+      icon: <FaServer className={`text-6xl mb-2 ${iconColor}`} />,
       skills: [
         { name: 'Linux', icon: <SiLinux /> },
         { name: 'Windows 11', icon: <SiWindows11 /> },
@@ -79,20 +80,20 @@ const Skills = () => {
     <div className="py-12">
       <div className="mx-auto">
         <div className="flex w-full items-center">
-          <CodeBracketIcon className="size-12 mr-5 text-blue-500" />
+          <CodeBracketIcon className={`size-12 mr-5 ${iconColor}`} />
           <PageHeading partOne="my" partTwo="skills" />
         </div>
         <div className="grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white mx-2 flex flex-col items-center justify-center overflow-hidden shadow-md rounded-lg"
+              className="bg-secondary mx-2 flex flex-col items-center justify-center overflow-hidden shadow-md rounded-lg"
             >
               <div className="px-4 py-5 sm:p-6">
                 <div className="flex items-center justify-center mb-4">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 text-center mb-4">
+                <h3 className="text-2xl font-medium text-gray-900 text-center mb-4 font-SofadiOne">
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap justify-center gap-4">
@@ -101,8 +102,8 @@ const Skills = () => {
                       key={skillIndex}
                       className="flex flex-col items-center"
                     >
-                      <div className="text-3xl mb-2">{skill.icon}</div>
-                      <span className="text-sm text-gray-600">
+                      <div className={`text-3xl mb-2 ${iconColor}`}>{skill.icon}</div>
+                      <span className="text-sm text-gray-600 font-medium">
                         {skill.name}
                       </span>
                     </div>

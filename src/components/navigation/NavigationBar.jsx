@@ -18,11 +18,12 @@ const NavigationBar = () => {
 
   return (
     <nav
-      className={`sticky z-10 w-full top-0 left-0 bg-white text-gray-800 transition-colors duration-300`}
+      className={`sticky z-10 w-full top-0 left-0 bg-primary text-gray-800 shadow transition-colors duration-300`}
+      data-aos="fade-down"
     >
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center">
-          <span className="self-center text-2xl font-SofadiOne font-semibold whitespace-nowrap">
+          <span className="self-center text-2xl text-white font-SofadiOne font-semibold whitespace-nowrap ">
             KatiyarMradul_
           </span>
         </a>
@@ -35,7 +36,11 @@ const NavigationBar = () => {
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
-            {isMenuOpen ? <XMarkIcon /> : <Bars3Icon />}
+            {isMenuOpen ? (
+              <XMarkIcon className="text-white" />
+            ) : (
+              <Bars3Icon className="text-white" />
+            )}
           </button>
         </div>
         <div
@@ -45,7 +50,7 @@ const NavigationBar = () => {
           id="navbar-sticky"
         >
           <ul
-            className={`flex flex-col p-4 md:p-0 items-center mt-4 font-bold text-xl border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-50 md:bg-white border-gray-100 font-DancingScript`}
+            className={`flex flex-col p-4 md:p-0 items-center mt-4 font-bold text-xl h-screen lg:h-max rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-50 border-gray-100 font-DancingScript`}
           >
             {navItems.map((item) => (
               <li key={item.name}>
@@ -53,7 +58,7 @@ const NavigationBar = () => {
                   to={item.link}
                   smooth={true}
                   duration={500}
-                  className={`block cursor-pointer py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-gray-900`}
+                  className={`block cursor-pointer py-2 pl-3 pr-4 rounded md:hover:bg-transparent hover:text-white md:p-0 text-grey text-xl`}
                   aria-current="page"
                 >
                   {item.name}

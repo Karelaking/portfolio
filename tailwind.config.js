@@ -17,6 +17,13 @@ export default {
         Righteous: ['Righteous', 'italic'],
       },
     },
+    colors: {
+      primary: '#DE8245',
+      active: '#541A0A',
+      secondary: '#FFFAF2',
+      white: '#FFFFFF',
+      grey: '#D9D0D4',
+    },
   },
   plugins: [],
 };
