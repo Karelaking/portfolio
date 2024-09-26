@@ -9,6 +9,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { ArrowDownIcon } from '@heroicons/react/16/solid';
 import Title from '../../components/typopraphy/Title';
+import Anim from '../../components/anim/Anim';
 
 const iconSize = 28;
 const iconColor = '';
@@ -52,7 +53,7 @@ const icons = [
   },
   {
     icon: <FaLinkedinIn size={iconSize} color="#0077B5" />,
-    href: 'https://www.linkedin.com/in/mradulkatiyar/',
+    href: 'www.linkedin.com/in/kumar-mradul-katiyar',
     text: 'LinkedIn',
     target: '_blank',
   },

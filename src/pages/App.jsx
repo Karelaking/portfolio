@@ -51,16 +51,23 @@ const App = () => {
         <main className="h-max w-full flex-1 px-4">
           {/* <Home /> */}
           <About />
-          <Academics/>
+          <Academics />
           <Experience />
           <Projects />
           <Skills />
           <Contacts />
         </main>
-        <footer className="flex flex-col justify-center min-h-7xl items-center bg-blue-200 p-4 text-white">
-          <Title first="mradul" second="katiyar" />
+        <footer className="flex flex-col bg-secondary justify-center min-h-7xl items-center p-4">
+          <div
+            className="text-8xl lg:text-9xl text-black text-center lg:flex justify-center lg:gap-8 items-center font-Staatliches font-medium"
+          >mradul<div className="">kumar</div>
+          </div>
 
-          <div id="copyright" align="center" className="text-black mt-6">
+          <div
+            id="copyright"
+            align="center"
+            className="text-black mt-6 text-active"
+          >
             {/* <div id="copyright" align="center" className="text-black"> */}
             &copy; 2024 www.your-site.com - All Rights Reserved.
             {/* <span>Last Updated : 09/07/2024 14:38:32</span> */}
