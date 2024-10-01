@@ -7,8 +7,8 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { ArrowDownIcon } from '@heroicons/react/16/solid';
 import Title from '../../components/typopraphy/Title';
+import PageHeading from '../../components/typopraphy/PageHeading';
 
 const iconSize = 28;
 const iconColor = '';
@@ -75,20 +75,14 @@ export const About = () => {
     <>
       <div
         id="about"
-        className="flex flex-col w-full min-h-screen h-full justify-center items-center"
+        className="flex flex-col w-full justify-center items-center lg:h-screen"
       >
         <div className="w-full flex flex-col items-center">
-          <p
-            className="text-4xl font-DancingScript font-semibold mb-3 mt-16 lg:mt-0 text-primary"
-            data-aos="fade-down"
-          >
-            Hey , this is
-          </p>
-          <Title first="mradul" second="katiyar" />
+          <h1 className="font-Staatliches lg:text-8xl text-6xl text-center">mradul kumar katiyar</h1>
         </div>
         <p
-          className="text-3xl lg:text-4xl p-3 lg:p-12 my-4 lg:my-0 text-primary lg:text-center font-DancingScript text-center font-medium"
-          data-aos="fade-up"
+          className="text-3xl lg:text-4xl p-3 my-2 lg:px-48 lg:my-6 text-primary lg:text-center font-DancingScript text-center font-medium"
+          // data-aos="fade-up"
         >
           A passionate programmer and developer from very vaibrent city Kanpur,
           Uttar Pradesh, India. Currently a student, I'm always on the lookout
@@ -109,12 +103,6 @@ export const About = () => {
               <p className="text-md font-SofadiOne font-medium">{icon.text}</p>
             </div>
           ))}
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="text-center text-xl mt-8 mb-6 capitalize font-DancingScript font-semibold">
-            scroll down
-          </p>
-          <ArrowDownIcon className="size-7 animate-bounce my-4 cursor-pointer text-primary" />
         </div>
       </div>
     </>
