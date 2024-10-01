@@ -11,7 +11,7 @@ const NavigationBar = () => {
 
   const navItems = [
     { name: 'Home', link: 'home' },
-    { name: 'About', link: '#about' },
+    { name: 'About', link: 'about' },
     { name: 'Projects', link: 'projects' },
     { name: 'Contact', link: 'contact' },
   ];
@@ -54,15 +54,13 @@ const NavigationBar = () => {
           >
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  to={item.link}
-                  smooth={true}
-                  duration={500}
+                <a
+                href={item.link}
                   className={`block cursor-pointer py-2 pl-3 pr-4 rounded md:hover:bg-transparent hover:text-white md:p-0 text-grey text-xl`}
                   aria-current="page"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

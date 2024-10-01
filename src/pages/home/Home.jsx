@@ -12,7 +12,7 @@ const WindowScrollHandler = () => {
 export const Home = () => {
   return (
     <>
-      <div className="flex flex-col mt-12 items-center lg:h-full h-screen lg:justify-center">
+      <div className="flex flex-col mt-12 items-center lg:h-full h-screen lg:justify-center" id='home'>
         <img
           src={Profile}
           alt="prfile image"
