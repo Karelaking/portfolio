@@ -7,8 +7,6 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import Title from '../../components/typopraphy/Title';
-import PageHeading from '../../components/typopraphy/PageHeading';
 
 const iconSize = 28;
 const iconColor = '';
@@ -52,7 +50,7 @@ const icons = [
   },
   {
     icon: <FaLinkedinIn size={iconSize} color="#0077B5" />,
-    href: 'https://www.linkedin.com/in/mradulkatiyar/',
+    href: 'www.linkedin.com/in/kumar-mradul-katiyar',
     text: 'LinkedIn',
     target: '_blank',
   },
@@ -62,12 +60,6 @@ const icons = [
     text: 'Email',
     target: '_blank',
   },
-  // {
-  //   icon: <FaWhatsapp size={iconSize} color="#25D366" />,
-  //   href: 'https://wa.me/919999999999',
-  //   text: 'Whatsapp',
-  //   target: '_blank',
-  // },
 ];
 
 export const About = () => {

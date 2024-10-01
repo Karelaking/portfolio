@@ -1,7 +1,13 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import Profile from '../../assets/images/profile.jpg';
 import { ArrowDownIcon } from '@heroicons/react/16/solid';
 import Title from '../../components/typopraphy/Title';
+
+const screenSize = window.innerHeight;
+
+const WindowScrollHandler = () => {
+  window.scrollTo(0, screenSize);
+};
 
 export const Home = () => {
   return (
@@ -25,7 +31,7 @@ export const Home = () => {
           <p className="text-center text-xl mt-8 capitalize text-active font-DancingScript font-semibold">
             scroll down
           </p>
-          <ArrowDownIcon className="size-7 animate-bounce mt-4 cursor-pointer text-primary" />
+          <ArrowDownIcon className="size-7 animate-bounce mt-4 cursor-pointer text-primary" onClick={WindowScrollHandler}/>
         </div>
       </div>
     </>

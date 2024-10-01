@@ -76,26 +76,26 @@ const Contacts = () => {
   }
 
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="w-full flex flex-col justify-center py-12">
       <div className="flex items-center">
         <PiAddressBook className={`size-11 ${iconColor} mr-5`} />
         <PageHeading partOne="contact" partTwo="me" />
       </div>
 
-      <div className="sm:mx-auto">
+      <div className="sm:mx-auto w-full">
         <div className="bg-white w-full rounded-md py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-2xl font-medium font-SofadiOne text-active"
               >
                 Name
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
+              <div className="mt-3 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaUser
-                    className="h-5 w-5 text-gray-400"
+                    className={`size-7 ${iconColor}`}
                     aria-hidden="true"
                   />
                 </div>
@@ -103,7 +103,7 @@ const Contacts = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  className="block w-full h-12 pl-16 sm:text-xl font-Righteous border-gray-300 rounded-md"
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
@@ -116,14 +116,14 @@ const Contacts = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-2xl  font-SofadiOne font-medium text-active"
               >
                 Email
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
+              <div className="mt-3 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaEnvelope
-                    className="h-5 w-5 text-gray-400"
+                    className={`size-7 ${iconColor}`}
                     aria-hidden="true"
                   />
                 </div>
@@ -131,7 +131,7 @@ const Contacts = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className={`focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md ${
+                  className={`block w-full pl-16 sm:text-xl h-12 font-Righteous border-gray-300 rounded-md ${
                     errors.email ? 'border-red-500' : ''
                   }`}
                   placeholder="you@example.com"
@@ -142,21 +142,21 @@ const Contacts = () => {
                 />
               </div>
               {errors.email && (
-                <p className="mt-2 text-sm text-red-600">{errors.email}</p>
+                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
               )}
             </div>
 
             <div>
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-2xl font-medium text-active font-SofadiOne"
               >
                 Subject
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
+              <div className="mt-3 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaEdit
-                    className="h-5 w-5 text-gray-400"
+                    className={`size-8 ${iconColor}`}
                     aria-hidden="true"
                   />
                 </div>
@@ -164,7 +164,7 @@ const Contacts = () => {
                   type="text"
                   name="subject"
                   id="subject"
-                  className="focus:ring-indigo-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  className="h-12 block w-full pl-16 sm:text-xl font-Righteous border-gray-300 rounded-md"
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -177,16 +177,16 @@ const Contacts = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-2xl font-medium font-SofadiOne text-active"
               >
                 Message
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
+              <div className="mt-3 relative rounded-md shadow-sm">
                 <textarea
                   id="message"
                   name="message"
                   rows="4"
-                  className={`focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md ${
+                  className={`block w-full sm:text-xl font-Righteous p-4 border-gray-300 rounded-md ${
                     errors.message ? 'border-red-500' : ''
                   }`}
                   placeholder="Your message here..."
@@ -207,27 +207,33 @@ const Contacts = () => {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-md lg:text-2xl font-Righteous font-medium text-white bg-primary hover:bg-active focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out"
               >
-                <FaPaperPlane className="mr-2 h-5 w-5" aria-hidden="true" />
+                <FaPaperPlane
+                  className="mr-4 lg:size-8 size-5"
+                  aria-hidden="true"
+                />
                 Send Message
               </button>
             </div>
           </form>
 
           <div className="mt-8">
-            <h3 className="text-lg font-medium text-gray-900">My Location</h3>
+            <h3 className="text-2xl font-medium font-Righteous text-active">
+              My Location
+            </h3>
             <div className="mt-2 bg-gray-50 rounded-lg p-4 flex items-center">
               <FaMapMarkerAlt
-                className="h-6 w-6 text-blue-500 mr-2"
+                className="size-8 text-active mr-5"
                 aria-hidden="true"
               />
-              <p className="text-sm text-gray-700">
+              <p className="text-md text-primary font-SofadiOne">
                 Kanpur, Uttar Pradesh, India, code - 208015
               </p>
             </div>
-            <div className="mt-4 rounded-xl overflow-hidden">
+            <div className="mt-4 w-full rounded-xl h-max">
               <iframe
+                className="w-full lg:h-96"
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3573.4272697784736!2d80.37436707536757!3d26.40968497695057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1727271300561!5m2!1sen!2sin"
               ></iframe>
             </div>
