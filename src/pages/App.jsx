@@ -1,13 +1,11 @@
 import NavigationBar from '../components/navigation/NavigationBar';
-import { About } from './about/About';
-import { Home } from './home/Home';
+import  About  from './about/About';
+import  Home  from './home/Home';
 import Projects from './projects/Projects';
 import Skills from './skills/Skills';
 import Experience from './experience/Experience';
 import Contacts from './contacts/Contacts';
-import Title from '../components/typopraphy/Title';
 import { FaChevronUp } from 'react-icons/fa';
-import { RxDividerHorizontal } from 'react-icons/rx';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles

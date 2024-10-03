@@ -8,8 +8,8 @@ const screenSize = window.innerHeight;
 const WindowScrollHandler = () => {
   window.scrollTo(0, screenSize);
 };
-
-export const Home = () => {
+ 
+const Home = () => {
   return (
     <>
       <div className="flex flex-col mt-12 items-center lg:h-full h-screen lg:justify-center" id='home'>
@@ -37,3 +37,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

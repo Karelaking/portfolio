@@ -62,7 +62,7 @@ const icons = [
   },
 ];
 
-export const About = () => {
+const About = () => {
   return (
     <>
       <div
@@ -100,3 +100,5 @@ export const About = () => {
     </>
   );
 };
+
+export default About;
