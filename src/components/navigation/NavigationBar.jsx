@@ -1,37 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
-import { Link } from 'react-scroll';
+import { NavLink, Link } from 'react-router-dom';
+import { MdLogin } from 'react-icons/md';
+import { CiLogout } from 'react-icons/ci';
+
+
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const navItems = [
-    { name: 'Home', link: 'home' },
-    { name: 'About', link: 'about' },
-    { name: 'Projects', link: 'projects' },
-    { name: 'Contact', link: 'contact' },
+    { name: 'Home', link: '/' },
+    { name: 'About', link: '/about' },
+    { name: 'Experience', link: '/experience' },
+    { name: 'Skills', link: '/skills' },
+    { name: 'Projects', link: '/projects' },
+    { name: 'Contact', link: '/contacts' },
   ];
 
   return (
     <nav
-      className={`sticky z-10 w-full top-0 left-0 bg-primary text-gray-800 shadow transition-colors duration-300`}
+      className={`sticky z-10 w-full top-0 left-0 bg-primary text-gray-800 shadow transition-colors duration-300 lg:px-12 px-1 rounded-bl-xl rounded-br-xl`}
       data-aos="fade-down"
     >
-      <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center">
-          <span className="self-center text-2xl text-white font-SofadiOne font-semibold whitespace-nowrap ">
+      <div className={`${isMenuOpen ? ' justify-center flex-col lg:block' : 'justify-between'} items-center mx-auto p-4 max-w-screen-2xl px-6 flex`}>
+        {/* Logo */}
+        <Link to={'/'} className="flex order-1 items-center">
+          <span className={`self-center ${isMenuOpen ? 'hidden lg:block' : 'block'} text-2xl text-white font-SofadiOne font-semibold whitespace-nowrap`}>
             KatiyarMradul_
           </span>
-        </a>
-        <div className="flex md:order-2">
+        </Link>
+        {/* Toggal Button */}
+        <div className="flex order-2">
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-700"
             aria-controls="navbar-sticky"
             aria-expanded={isMenuOpen}
           >
@@ -43,27 +52,46 @@ const NavigationBar = () => {
             )}
           </button>
         </div>
+        {/* Navigation Link */}
         <div
-          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+          className={`items-center justify-between lg:w-max md:flex md:w-auto md:order-1 ${
             isMenuOpen ? 'block' : 'hidden'
           }`}
           id="navbar-sticky"
         >
           <ul
-            className={`flex flex-col p-4 md:p-0 items-center mt-4 font-bold text-xl h-screen lg:h-max rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-50 border-gray-100 font-DancingScript`}
+            className={`flex flex-col p-4 md:p-0 items-center mt-4 font-bold text-xl h-fit lg:h-max rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-50 border-gray-100`}
           >
             {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                href={item.link}
-                  className={`block cursor-pointer py-2 pl-3 pr-4 rounded md:hover:bg-transparent hover:text-white md:p-0 text-grey text-xl`}
-                  aria-current="page"
-                >
-                  {item.name}
-                </a>
-              </li>
+              <NavLink
+                to={item.link}
+                key={item.name}
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? 'text-white'
+                    : `block cursor-pointer py-2 pl-3 pr-4 rounded md:hover:bg-transparent hover:text-white md:p-0 text-xl`
+                }
+              >
+                <li>{item.name}</li>
+              </NavLink>
             ))}
           </ul>
+        </div>
+        {/* Login & Logout */}
+        <div
+          className={`order-3 md:block ${isMenuOpen ? 'block lg:hidden' : 'hidden'} bg-white px-6 py-2 rounded-3xl w-max`}
+        >
+          {isLoggedIn ? (
+            <button className="flex justify-center items-center gap-4">
+              <MdLogin className="size-5" />
+              Login
+            </button>
+          ) : (
+            <button className="flex justify-center items-center gap-4">
+              <CiLogout className="size-5" />
+              Logout
+            </button>
+          )}
         </div>
       </div>
     </nav>
