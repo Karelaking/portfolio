@@ -71,6 +71,7 @@ const NavigationBar = () => {
                     ? 'text-white'
                     : `block cursor-pointer py-2 pl-3 pr-4 rounded md:hover:bg-transparent hover:text-white md:p-0 text-xl`
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 <li>{item.name}</li>
               </NavLink>
