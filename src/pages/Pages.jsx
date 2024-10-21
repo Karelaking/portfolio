@@ -5,7 +5,7 @@ import Experience from './experience/Experience';
 import Projects from './projects/Projects';
 import Skills from './skills/Skills';
 import Contacts from './contacts/Contacts';
-import Login from './auth/login';
+import Login from './auth/Login';
 import SignIn from './auth/signIn';
 
 export {

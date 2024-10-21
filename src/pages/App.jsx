@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <NavigationBar />
-      <main className="min-h-screen max-w-screen-2xl mx-auto px-12 py-6">
+      <main className="min-h-screen max-w-screen-2xl lg:px-12 mx-6 py-6 font-Staatliches">
         <Outlet />
       </main>
       <Footer />

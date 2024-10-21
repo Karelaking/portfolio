@@ -36,7 +36,7 @@ const NavigationBar = () => {
           </span>
         </Link>
         {/* Toggal Button */}
-        <div className="flex order-2">
+        <div className="flex order-3 lg:order-2">
           <button
             onClick={toggleMenu}
             type="button"
@@ -54,7 +54,7 @@ const NavigationBar = () => {
         </div>
         {/* Navigation Link */}
         <div
-          className={`items-center justify-between lg:w-max md:flex md:w-auto md:order-1 ${
+          className={`items-center justify-between lg:w-max md:flex md:w-auto order-1 lg:order-2 ${
             isMenuOpen ? 'block' : 'hidden'
           }`}
           id="navbar-sticky"
@@ -79,7 +79,7 @@ const NavigationBar = () => {
         </div>
         {/* Login & Logout */}
         <div
-          className={`order-3 md:block ${isMenuOpen ? 'block lg:hidden' : 'hidden'} bg-white px-6 py-2 rounded-3xl w-max`}
+          className={`order-2 mb-8 lg:order-3 md:block ${isMenuOpen ? 'block lg:hidden' : 'hidden'} bg-white px-6 py-2 rounded-3xl w-max`}
         >
           {isLoggedIn ? (
             <button className="flex justify-center items-center gap-4">

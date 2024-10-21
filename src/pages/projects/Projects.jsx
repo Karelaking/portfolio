@@ -17,16 +17,19 @@ const Projects = () => {
             image="https://placehold.co/600x400"
             title="demo title"
             description="Awarded for exceptional performance in backend development and system optimization."
+            link="/"
           />
           <CardWithImage
             image="https://placehold.co/600x400"
             title="demo title"
             description="this is description. Awarded for exceptional performance in backend development and system optimization."
+            link="/"
           />
           <CardWithImage
             image="https://placehold.co/600x400"
             title="demo title"
             description="this is description. Awarded for exceptional performance in backend development and system optimization."
+            link="/"
           />
         </div>
       </div>

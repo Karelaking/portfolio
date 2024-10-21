@@ -62,11 +62,11 @@ const Experience = () => {
                 <h3 className="text-3xl font-semibold font-SofadiOne mb-2 text-gray-800">
                   {experience.role}
                 </h3>
-                <p className={`mb-2 ${iconColors}`}>{experience.company}</p>
+                <p className={`mb-2 text-xl ${iconColors}`}>{experience.company}</p>
                 <p className="text-sm text-gray-400 mb-4">
                   {experience.duration}
                 </p>
-                <ul className="list-disc font-medium text-md list-inside text-gray-600">
+                <ul className="list-disc font-medium text-lg list-inside">
                   {experience.responsibilities.map((responsibility, index) => (
                     <li key={index} className="mb-1">
                       {responsibility}
