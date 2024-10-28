@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Footer from '../components/footer/Footer';
 import { Outlet } from 'react-router-dom';
 import React from 'react';
+import bgImage from '../assets/svgs/temple.svg';
 
 // Initialize AOS
 AOS.init({});

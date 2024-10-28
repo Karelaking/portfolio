@@ -4,8 +4,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { MdLogin } from 'react-icons/md';
 import { CiLogout } from 'react-icons/ci';
 
-
-
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -19,7 +17,7 @@ const NavigationBar = () => {
     { name: 'About', link: '/about' },
     { name: 'Experience', link: '/experience' },
     { name: 'Skills', link: '/skills' },
-    { name: 'Projects', link: '/projects' },
+    // { name: 'Projects', link: '/projects' },
     { name: 'Contact', link: '/contacts' },
   ];
 
@@ -28,10 +26,18 @@ const NavigationBar = () => {
       className={`sticky z-10 w-full top-0 left-0 bg-primary text-gray-800 shadow transition-colors duration-300 lg:px-12 px-1 rounded-bl-xl rounded-br-xl`}
       data-aos="fade-down"
     >
-      <div className={`${isMenuOpen ? ' justify-center flex-col lg:block' : 'justify-between'} items-center mx-auto p-4 max-w-screen-2xl px-6 flex`}>
+      <div
+        className={`${
+          isMenuOpen ? ' justify-center flex-col lg:block' : 'justify-between'
+        } items-center mx-auto max-w-screen-2xl px-6 py-4 lg:py-4 flex`}
+      >
         {/* Logo */}
         <Link to={'/'} className="flex order-1 items-center">
-          <span className={`self-center ${isMenuOpen ? 'hidden lg:block' : 'block'} text-2xl text-white font-SofadiOne font-semibold whitespace-nowrap`}>
+          <span
+            className={`self-center ${
+              isMenuOpen ? 'hidden lg:block' : 'block'
+            } text-2xl text-white font-SofadiOne font-semibold whitespace-nowrap`}
+          >
             KatiyarMradul_
           </span>
         </Link>
@@ -79,8 +85,10 @@ const NavigationBar = () => {
           </ul>
         </div>
         {/* Login & Logout */}
-        <div
-          className={`order-2 mb-8 lg:order-3 md:block ${isMenuOpen ? 'block lg:hidden' : 'hidden'} bg-white px-6 py-2 rounded-3xl w-max`}
+        {/* <div
+          className={`order-2 mb-8 lg:order-3 md:block ${
+            isMenuOpen ? 'block' : 'hidden'
+          } bg-white px-6 py-2 rounded-3xl w-max`}
         >
           {isLoggedIn ? (
             <button className="flex justify-center items-center gap-4">
@@ -93,7 +101,7 @@ const NavigationBar = () => {
               Logout
             </button>
           )}
-        </div>
+        </div> */}
       </div>
     </nav>
   );

@@ -12,9 +12,9 @@ const WindowScrollHandler = () => {
 
 const Home = () => {
   return (
-    <div className="lg:flex lg:h-full items-center justify-center w-full">
+    <div className="lg:flex lg:min-h-screen items-center justify-center w-full">
       {/* Right Part */}
-      <div className="lg:w-1/2 order-2">
+      <div className="w-full order-2">
         <img
           src={HomeImage}
           alt="home image"
@@ -25,7 +25,7 @@ const Home = () => {
 
       {/* Left Part */}
       <div
-        className="flex lg:w-1/2 order-1 flex-col mt-12 items-center lg:h-full lg:justify-center lg:px-6"
+        className="flex lg:w-1/2 w-full order-1 flex-col mt-12 items-center lg:h-full lg:justify-center lg:px-6"
         id="home"
       >
         <div className="font-DancingScript text-3xl lg:text-5xl text-primary font-bold px-2 text-start w-full">
@@ -42,7 +42,7 @@ const Home = () => {
           good learner.
         </div>
         {/* Git hub data */}
-        <div className="flex w-full gap-4 my-4 lg:my-12 justify-between">
+        {/* <div className="flex w-full gap-4 my-4 lg:my-12 justify-between">
           <div className="flex text-active flex-col font-bold font-Staatliches items-center justify-center text-xl lg:text-3xl">
             Repositories
             <span className="text-md font-light text-primary">1500+</span>
@@ -55,7 +55,7 @@ const Home = () => {
             Contribution
             <span className="text-md font-light text-primary">1500+</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

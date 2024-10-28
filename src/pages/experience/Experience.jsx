@@ -11,36 +11,26 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      company: 'Tech Innovators Inc.',
-      role: 'Senior Backend Developer',
-      duration: 'Jan 2020 - Present',
-      responsibilities: [
-        'Architected and implemented scalable backend systems',
-        'Optimized database performance and query efficiency',
-        'Mentored junior developers and led code reviews',
-      ],
+      company: 'Oxford Model Inter College, Kanpur, Uttar Pradesh.',
+      role: 'Class 10th (High School)',
+      duration: '2019 - 2020',
+      responsibilities:
+        'I have successfully completed my class 10th from UP board with 82% of marks. With the subjects of physics, chemistry, and maths.',
     },
     {
       id: 2,
-      company: 'Web Solutions Ltd.',
-      role: 'Full-Stack Developer',
-      duration: 'Mar 2017 - Dec 2019',
-      responsibilities: [
-        'Developed end-to-end web applications using modern technologies',
-        'Implemented RESTful APIs and integrated third-party services',
-        'Collaborated with UX/UI designers to create intuitive user interfaces',
-      ],
+      company: 'Oxford Model Inter College, Kanpur, Uttar Pradesh.',
+      role: 'Class 12th (Inter)',
+      duration: '2021 - 2022',
+      responsibilities:
+        'I have successfully completed my class 12th from UP board with 80% of marks. With the subjects of physics, chemistry, and maths.',
     },
     {
       id: 3,
-      company: 'StartUp Dynamo',
-      role: 'Junior Developer',
-      duration: 'Jun 2015 - Feb 2017',
-      responsibilities: [
-        'Assisted in the development of backend services and APIs',
-        'Contributed to the maintenance and improvement of existing codebase',
-        'Participated in agile development processes and sprint planning',
-      ],
+      company: 'United College of research and engginering, Grater Noida, Uttar pradesh.',
+      role: 'B.tech (CSE)',
+      duration: '2024 - Present',
+      responsibilities:'Currently i am a first year student of b.tech (CSE) in United college of research and engginering, Grater Noida, Uttar pradesh.',
     },
   ];
 
@@ -66,13 +56,14 @@ const Experience = () => {
                 <p className="text-sm text-gray-400 mb-4">
                   {experience.duration}
                 </p>
-                <ul className="list-disc font-medium text-lg list-inside">
+                {/* <ul className="list-disc font-medium text-lg list-inside">
                   {experience.responsibilities.map((responsibility, index) => (
                     <li key={index} className="mb-1">
                       {responsibility}
                     </li>
                   ))}
-                </ul>
+                </ul> */}
+                <p>{experience.responsibilities}</p>
               </div>
             ))}
           </div>

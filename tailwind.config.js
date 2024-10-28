@@ -10,6 +10,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('src/assets/svgs/temple.svg')",
+        // 'footer-texture': "url('/img/footer-texture.png')",
+      },
       fontFamily: {
         SofadiOne: ['SofadiOne', 'sans-serif'],
         DancingScript: ['DancingScript', 'italic'],
