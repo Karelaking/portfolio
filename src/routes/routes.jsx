@@ -5,8 +5,6 @@ import {
   Projects,
   Skills,
   Contacts,
-  Login,
-  SignIn,
 } from '../pages/Pages';
 import App from '../pages/App';
 import AuthLayout from '../components/authLayout/AuthLayout';
@@ -43,22 +41,6 @@ const router = createBrowserRouter([
       {
         path: '/contacts',
         element: <Contacts />,
-      },
-      {
-        path: '/login',
-        element: (
-          <AuthLayout authentication={false}>
-            <Login />
-          </AuthLayout>
-        ),
-      },
-      {
-        path: '/signin',
-        element: (
-          <AuthLayout authentication={false}>
-            <SignIn />
-          </AuthLayout>
-        ),
       },
     ],
   },
