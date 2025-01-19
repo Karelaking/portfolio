@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-mobile {
+  box-shadow: 7px 7px black;
+}
+
+.shadow-mobile:hover {
+  box-shadow: 0px 0px black;
+}
+
+.shadow-desktop {
+  box-shadow: 14px 14px black;
+}
